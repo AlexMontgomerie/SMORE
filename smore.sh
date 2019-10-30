@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SMORE_PATH=~/SMORE
+SMORE_PATH=/etc/smore
 
 # 1 - Chose a random pair of keys
 KEYS_ALL=( $(cat $SMORE_PATH/KEYS.txt) )

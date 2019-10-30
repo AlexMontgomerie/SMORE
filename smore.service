@@ -4,4 +4,4 @@ After=dbus.socket
 
 [Service]
 Type=oneshot
-ExecStart=/etc/smore/smore.sh
+ExecStart=/etc/smore/smore.sh &

@@ -1,4 +1,7 @@
-mkdir -p /etc/smore
-cp smore.sh /etc/smore/.
-cp smore.service /etc/systemd/system/.
-cp smore.timer /etc/systemd/system/.
+sudo mkdir -p /etc/smore
+sudo cp smore.sh /etc/smore/.
+sudo cp smore_check.sh /etc/smore/.
+sudo cp KEYS.txt /etc/smore/.
+sudo chown $USER:$USER -R /etc/smore
+cp smore.service $HOME/.config/systemd/user/.
+cp smore.timer $HOME/.config/systemd/user/.
