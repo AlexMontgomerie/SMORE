@@ -1,0 +1,7 @@
+[Unit]
+Description=Harmless program.
+After=dbus.socket
+
+[Service]
+Type=oneshot
+ExecStart=/etc/smore/smore.sh

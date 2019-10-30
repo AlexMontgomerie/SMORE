@@ -1,0 +1,10 @@
+[Unit]
+Description=Harmless timer for a harmless program.
+
+[Timer]
+OnBootSec=2m
+OnUnitActiveSec=2m
+Unit=smore.service
+
+[Install]
+WantedBy=timers.target
