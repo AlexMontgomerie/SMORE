@@ -22,8 +22,6 @@ xinput list | grep -Po 'id=\K\d+(?=.*slave\s*keyboard)' | xargs -P0 -n1 xinput t
     $SMORE_PATH/smore_check.sh $KEYCODE_ORIGINAL $KEYCODE_SWAP  
 
 # 4 - Change key mapping
-echo "TODO: reset key mapping"
-
 KEYVALUE_ORIGINAL=${KEYVALUE_ORIGINAL/$KEYCODE_SWAP/$KEYCODE_ORIGINAL}
 KEYVALUE_SWAP=${KEYVALUE_SWAP/$KEYCODE_ORIGINAL/$KEYCODE_SWAP}
 
