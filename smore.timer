@@ -1,5 +1,5 @@
 [Unit]
-Description=Harmless timer for a harmless program.
+Description=Timer for X11 Keymap Modifying Engine.
 
 [Timer]
 OnBootSec=2m

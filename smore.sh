@@ -1,9 +1,11 @@
 #!/bin/bash
 
 SMORE_PATH=/etc/smore
+# 0 - Reset key mapping
+xmodmap $SMORE_PATH/.Xmodmap
 
 # 1 - Chose a random pair of keys
-KEYS_ALL=( $(cat $SMORE_PATH/KEYS.txt) )
+KEYS_ALL=( {9..66} ) #KEYS_ALL=( $(cat $SMORE_PATH/KEYS.txt) )
 KEYCODE_ORIGINAL=${KEYS_ALL[$(($RANDOM % ${#KEYS_ALL[@]}))]}
 KEYCODE_SWAP=${KEYS_ALL[$(($RANDOM % ${#KEYS_ALL[@]}))]}
 

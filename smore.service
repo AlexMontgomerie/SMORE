@@ -1,5 +1,5 @@
 [Unit]
-Description=Harmless program.
+Description=X11 Keymap Modifying Engine.
 After=dbus.socket
 
 [Service]
