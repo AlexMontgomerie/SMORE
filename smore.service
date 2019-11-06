@@ -2,5 +2,5 @@
 Description=X11 Keymap Modifying Engine.
 
 [Service]
-Type=fork
+Type=simple
 ExecStart=/etc/smore/smore.sh 

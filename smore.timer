@@ -4,7 +4,7 @@ Description=Timer for X11 Keymap Modifying Engine.
 [Timer]
 OnBootSec=2m
 OnUnitActiveSec=2m
-Unit=smore.service
+Unit=restart_smore.service
 
 [Install]
 WantedBy=timers.target

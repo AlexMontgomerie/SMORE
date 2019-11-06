@@ -1,0 +1,6 @@
+[Unit]
+Description=restart smore
+
+[Service]
+Type=oneshot
+ExecStart=/bin/systemctl --user restart smore.service
