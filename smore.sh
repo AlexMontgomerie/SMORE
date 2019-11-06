@@ -30,4 +30,3 @@ xmodmap -e "${KEYVALUE_SWAP}"
 # 3 - Wait for key stroke
 xinput list | grep -Po 'id=\K\d+(?=.*slave\s*keyboard)' | xargs -P0 -n1 xinput test | \
     $SMORE_PATH/smore_check.sh "$KEYCODE_ORIGINAL" "$KEYCODE_SWAP" "$KEYVALUE_ORIGINAL" "$KEYVALUE_SWAP"
-
