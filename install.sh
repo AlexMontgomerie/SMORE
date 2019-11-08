@@ -1,7 +1,6 @@
 sudo mkdir -p /etc/smore
 sudo chown $USER:$USER -R /etc/smore
 cp smore.sh /etc/smore/.
-cp smore_check.sh /etc/smore/.
 cp KEYS.txt /etc/smore/.
 cp smore.service $HOME/.config/systemd/user/.
 cp restart_smore.service $HOME/.config/systemd/user/.
