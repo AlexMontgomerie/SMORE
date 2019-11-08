@@ -8,7 +8,7 @@ SMORE_PATH=/etc/smore
 if [[ -f "$SMORE_PATH/LAST_KEYS" ]]; then xmodmap "$SMORE_PATH/LAST_KEYS"; fi
 
 # 1 - Chose a random pair of keys
-KEYS_ALL=( {9..66} ) #KEYS_ALL=( $(cat $SMORE_PATH/KEYS.txt) )
+KEYS_ALL=( {9..66} )
 KEYCODE_ORIGINAL=${KEYS_ALL[$(($RANDOM % ${#KEYS_ALL[@]}))]}
 KEYCODE_SWAP=${KEYS_ALL[$(($RANDOM % ${#KEYS_ALL[@]}))]}
 
