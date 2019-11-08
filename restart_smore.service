@@ -1,5 +1,5 @@
 [Unit]
-Description=restart smore
+Description=X11 Keymap Reinitialise ..
 
 [Service]
 Type=oneshot

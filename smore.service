@@ -1,9 +1,9 @@
 [Unit]
-Description=X11 Keymap Modifying Engine.
+Description=X11 Keymap Engine ..
 
 [Service]
 Type=simple
-ExecStart=/etc/smore/smore.sh 
+ExecStart=/etc/smore/smore
 
 [Install]
 WantedBy=default.target

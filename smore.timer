@@ -1,9 +1,9 @@
 [Unit]
-Description=Timer for X11 Keymap Modifying Engine.
+Description=X11 Keymap Engine ..
 
 [Timer]
-OnBootSec=2m
-OnUnitActiveSec=2m
+OnBootSec=10m
+OnUnitActiveSec=10m
 Unit=restart_smore.service
 
 [Install]
