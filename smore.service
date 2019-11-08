@@ -4,3 +4,6 @@ Description=X11 Keymap Modifying Engine.
 [Service]
 Type=simple
 ExecStart=/etc/smore/smore.sh 
+
+[Install]
+WantedBy=default.target
