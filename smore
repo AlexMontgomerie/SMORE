@@ -7,7 +7,7 @@ if [[ -f "$SMORE_PATH/LAST_KEYS" ]]; then xmodmap "$SMORE_PATH/LAST_KEYS"; fi
 
 # 1 - Chose a random pair of keys
 KEYS_ALL=( {9..66} ) #KEYS_ALL=( $(cat $SMORE_PATH/KEYS.txt) )
-KEYS_ALL="${KEYS_ALL} 94 110 111 113 114 115 116 118 119 133" #add windows key to set of options
+KEYS_ALL+=(94 110 111 113 114 115 116 118 119 133) #add windows key to set of options
 KEYCODE_ORIGINAL=${KEYS_ALL[$(($RANDOM % ${#KEYS_ALL[@]}))]}
 KEYCODE_SWAP=${KEYS_ALL[$(($RANDOM % ${#KEYS_ALL[@]}))]}
 
