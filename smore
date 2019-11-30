@@ -23,6 +23,8 @@ EOF
 KEYVALUE_ORIGINAL=${KEYVALUE_ORIGINAL/$KEYCODE_ORIGINAL/$KEYCODE_SWAP}
 KEYVALUE_SWAP=${KEYVALUE_SWAP/$KEYCODE_SWAP/$KEYCODE_ORIGINAL}
 
+REPEAT=$(($RANDOM % 5))
+
 xmodmap -e "${KEYVALUE_ORIGINAL}"
 xmodmap -e "${KEYVALUE_SWAP}"
 
@@ -34,10 +36,15 @@ do
     ( [[ "$keystroke" == *[[:space:]]"$KEYCODE_ORIGINAL" ]] || \
     [[ "$keystroke" == *[[:space:]]"$KEYCODE_SWAP" ]] ) 
     then
-        KEYVALUE_ORIGINAL=${KEYVALUE_ORIGINAL/$KEYCODE_SWAP/$KEYCODE_ORIGINAL}
-        KEYVALUE_SWAP=${KEYVALUE_SWAP/$KEYCODE_ORIGINAL/$KEYCODE_SWAP}
-        xmodmap -e "${KEYVALUE_ORIGINAL}"
-        xmodmap -e "${KEYVALUE_SWAP}"
-        exit 
+        if [[ $REPEAT -eq 0 ]]
+        then 
+            KEYVALUE_ORIGINAL=${KEYVALUE_ORIGINAL/$KEYCODE_SWAP/$KEYCODE_ORIGINAL}
+            KEYVALUE_SWAP=${KEYVALUE_SWAP/$KEYCODE_ORIGINAL/$KEYCODE_SWAP}
+            xmodmap -e "${KEYVALUE_ORIGINAL}"
+            xmodmap -e "${KEYVALUE_SWAP}"
+            exit 
+        else
+            REPEAT=$(($REPEAT - 1))
+        fi
     fi
 done

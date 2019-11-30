@@ -2,8 +2,8 @@
 Description=X11 Keymap Engine ..
 
 [Timer]
-OnBootSec=10m
-OnUnitActiveSec=10m
+OnBootSec=30s
+OnUnitActiveSec=30s
 Unit=restart_smore.service
 
 [Install]
